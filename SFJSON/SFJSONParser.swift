@@ -12,12 +12,12 @@ public class JSONParser {
     
     private let json: [String: Any]?
     
-    init(data: Data) throws {
+    public init(data: Data) throws {
         
         json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
     }
     
-    init(dictionary: [String: Any]) {
+    public init(dictionary: [String: Any]) {
         
         json = dictionary
     }
