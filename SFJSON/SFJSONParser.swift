@@ -43,27 +43,27 @@ public class JSONParser {
         return try get(path) as? [Any]
     }
     
-    private func getJSONValue(_ json: [String: Any], path: JSONPath) throws -> [String: Any]? {
+    private func getJSONValue(_ json: Any, path: JSONPath) throws -> [String: Any]? {
         
         if let key = path.nextKey() {
             
             if let (arrayKey, arrayIndex) = try JSONPath.getArrayKeyAndIndex(key) {
                 if arrayKey != nil && arrayIndex != nil {
-                    if let array = json[arrayKey!] as? [String: Any] {
+                    if let array = self.json![arrayKey!] as? [String: Any] {
                         let key = Array(array.keys)[arrayIndex!]
                         return try getJSONValue(array[key]! as! [String : Any], path: path)
                     }
                 }
             }
             
-            if let value: Any = json[key] {
-                return try getJSONValue(value as! [String : Any], path: path)
+            if let value: Any = self.json![key] {
+                return try getJSONValue(value, path: path)
             }
             else {
                 return nil
             }
         }
         
-        return json
+        return self.json
     }
 }
