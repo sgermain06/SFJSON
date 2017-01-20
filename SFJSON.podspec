@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SFJSON"
-  s.version      = "0.0.8"
-  s.summary      = "Parse JSON easily, by resolving string paths"
+  s.version      = "1.0.0"
+  s.summary      = "Parse JSON easily, using string paths for dictionary traversal."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
