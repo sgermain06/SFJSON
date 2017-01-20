@@ -81,7 +81,7 @@ class JSONPath {
             var arrayIndex: Int?
             var itr = 0
             
-            for match in try key =~ "\\w+(?=\\[)|(?<=\\w\\[)(\\d+)(?=\\]" {
+            for match in try key =~ "\\w+(?=\\[)|(?<=\\w\\[)(\\d+)(?=\\])" {
                 if (itr == 0) {
                     arrayKey = match
                 }
