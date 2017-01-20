@@ -17,6 +17,11 @@ public class JSONParser {
         json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
     }
     
+    init(_ dictionary: [String: Any]) {
+        
+        json = dictionary
+    }
+    
     public func get(_ path: String) throws -> Any? {
         
         return try getJSONValue(json!, path: JSONPath(path))

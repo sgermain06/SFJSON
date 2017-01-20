@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SFJSON"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Parse JSON easily, by resolving string paths"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  Apple's JSONSerialization framework is very basic. It works well and everything, but being able to dive into a JSON structure, once parsed, can be quite a pain. Using a similar paradigm as what C# uses with Newtonsoft's JSON parser, this framework allows you to pass in a string as a path in a <key>.<subkey>[index] format and let the framework do the job.
+  Apple's JSONSerialization framework is very basic. It works well and everything, but being able to dive into a JSON structure, once parsed, can be quite a pain. Using a similar paradigm as what C# uses with Newtonsoft's JSON parser, this framework allows you to pass in a string as a path in a <key>.<subkey>[index] format and let the framework do the job. Now, you can even pass in a pre-parsed dictionary and have JSONParser navigate through it using the JSONPath object.
                    DESC
 
   s.homepage     = "https://github.com/sgermain06/SFJSON.git"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/sgermain06/SFJSON.git" }
+  s.source       = { :git => "https://github.com/sgermain06/SFJSON.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
